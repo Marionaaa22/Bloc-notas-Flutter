@@ -45,7 +45,7 @@ class _NotesScreenState extends State<NotesScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Bloc de Notes Simple')),
+      appBar: AppBar(title: Text('Bloc de Notes ')),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -70,7 +70,7 @@ class _NotesScreenState extends State<NotesScreen> {
                   return ListTile(
                     title: Text(_notes[index]),
                     trailing: IconButton(
-                      icon: Icon(Icons.delete, color: Colors.red),
+                      icon: Icon(Icons.delete, color: const Color.fromARGB(255, 54, 244, 86)),
                       onPressed: () => _removeNote(index),
                     ),
                   );
