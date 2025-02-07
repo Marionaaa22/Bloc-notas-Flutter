@@ -25,7 +25,7 @@ class NotesScreen extends StatefulWidget {
 
 class _NotesScreenState extends State<NotesScreen> {
   final TextEditingController _controller = TextEditingController();
-  final List<String> _notes = []; // Lista para guardar notas
+  final List<String> _notes = []; 
 
   void _addNote() {
     if (_controller.text.isNotEmpty) {
@@ -44,8 +44,18 @@ class _NotesScreenState extends State<NotesScreen> {
 
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
-      appBar: AppBar(title: Text('Bloc de Notes ')),
+      appBar: AppBar(
+        title: Text('Bolc de Notes digital'),
+        centerTitle: true,
+        titleTextStyle: TextStyle(
+          color: const Color.fromARGB(255, 122, 193, 156),
+          fontSize: 24,
+          fontWeight: FontWeight.bold,
+        ),
+        ) ,
+
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -70,7 +80,7 @@ class _NotesScreenState extends State<NotesScreen> {
                   return ListTile(
                     title: Text(_notes[index]),
                     trailing: IconButton(
-                      icon: Icon(Icons.delete, color: const Color.fromARGB(255, 54, 244, 86)),
+                      icon: Icon(Icons.delete, color: const Color.fromARGB(255, 0, 0, 0)),
                       onPressed: () => _removeNote(index),
                     ),
                   );
